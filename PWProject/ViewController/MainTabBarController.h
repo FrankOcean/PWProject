@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MainTabBarController.h
 //  PWProject
 //
 //  Created by Frank on 16/4/13.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MainTabBarController : UITabBarController
 
 @end
-

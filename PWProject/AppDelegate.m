@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "MainTabBarController.h"
+
 
 @interface AppDelegate ()
 
@@ -14,9 +16,20 @@
 
 @implementation AppDelegate
 
++ (AppDelegate *)instance
+{
+    return  APPDELEGATE;  // (AppDelegate *)[UIApplication sharedApplication].delegate;
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    MainTabBarController * mainVC = [[MainTabBarController alloc]init];
+    self.window.rootViewController = mainVC;
+    [self.window makeKeyAndVisible];
+   
     return YES;
 }
 
